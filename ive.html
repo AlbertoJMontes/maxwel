@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Presentación de los 5 niveles de liderazgo de John Maxwell</title>
+  <style>
+    .slide {
+      display: none;
+    }
+  </style>
+  <script>
+    var slideIndex = 0;
+
+    function showSlide(n) {
+      var slides = document.getElementsByClassName("slide");
+      if (n >= slides.length) {
+        slideIndex = 0;
+      }
+      if (n < 0) {
+        slideIndex = slides.length - 1;
+      }
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[slideIndex].style.display = "block";
+    }
+
+    function changeSlide(n) {
+      showSlide(slideIndex += n);
+    }
+
+    window.addEventListener("DOMContentLoaded", function() {
+      showSlide(slideIndex);
+    });
+  </script>
+</head>
+<body>
+  <h1>Los 5 Niveles de Liderazgo de John Maxwell</h1>
+
+  <div class="slide">
+    <h2>Nivel 1: Posición</h2>
+    <p>Este nivel se basa en el título o posición que uno tiene dentro de una organización. La influencia es mínima y viene principalmente del poder formal.</p>
+  </div>
+
+  <div class="slide">
+    <h2>Nivel 2: Permiso</h2>
+    <p>En este nivel, se gana influencia al construir relaciones sólidas con los demás. Se trata de obtener permiso y confianza de las personas a las que se lidera.</p>
+  </div>
+
+  <div class="slide">
+    <h2>Nivel 3: Producción</h2>
+    <p>La efectividad y la productividad personal son clave en este nivel. Uno demuestra ser un líder eficiente y capaz de lograr resultados consistentes.</p>
+  </div>
+
+  <div class="slide">
+    <h2>Nivel 4: Desarrollo de Personas</h2>
+    <p>Aquí el enfoque se desplaza hacia el desarrollo de otros líderes. Se trata de invertir tiempo y energía en el crecimiento y el éxito de las personas que se lidera.</p>
+  </div>
+
+  <div class="slide">
+    <h2>Nivel 5: Pinnacle</h2>
+    <p>El nivel más alto de liderazgo, donde uno trasciende su propio éxito y se dedica a servir a una causa más grande que uno mismo.</p>
+  </div>
+
+  <button onclick="changeSlide(-1)">Anterior</button>
+  <button onclick="changeSlide(1)">Siguiente</button>
+
+</body>
+</html>
